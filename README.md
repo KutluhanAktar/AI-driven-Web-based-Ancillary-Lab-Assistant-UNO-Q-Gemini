@@ -59,7 +59,7 @@ As I was taking inspiration from my previous lab assistant project, I heavily mo
 - **[Instructables]()**
 - **[Hackaday]()**
 
-<img width="3072" height="4096" alt="pcb_solder_7" src="https://github.com/user-attachments/assets/360f7abe-b615-44c5-8868-0688f60921bf" />
+<img width="3072" height="4096" alt="pcb_solder_7" src="https://github.com/user-attachments/assets/360f7abe-b615-44c5-8868-0688f60921bf" /><br>
 
 
 <img width="2561" height="1397" alt="model_design_24_overall" src="https://github.com/user-attachments/assets/65a6ec09-efc6-44e6-b5b5-7fa68f768365" />
