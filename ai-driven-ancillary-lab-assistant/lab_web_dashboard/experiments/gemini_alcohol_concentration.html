@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Safety: Alcohol & Electrochemical Sensing</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 900px; margin: auto; padding: 20px; background-color: #f4f4f9; }
+        header { background: #2c3e50; color: white; padding: 2rem; text-align: center; border-radius: 8px; }
+        section { background: white; padding: 20px; margin-top: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h2 { color: #2980b9; border-bottom: 2px solid #eee; padding-bottom: 10px; }
+        .spec-table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        .spec-table th, .spec-table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        .spec-table th { background-color: #f8f9fa; }
+        .warning { border-left: 5px solid #e74c3c; background-color: #fdf2f2; padding: 15px; }
+        code { background: #eee; padding: 2px 5px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Alcohol in the Lab</h1>
+    <p>Sensing Technology & Safety Protocols</p>
+</header>
+
+<section>
+    <h2>The Gravity: Electrochemical Alcohol Sensor</h2>
+    <p>The <strong>Gravity: Factory Calibrated Electrochemical Alcohol Sensor</strong> is a high-precision module designed for detecting ethanol concentrations in the air. Unlike standard semi-conductor sensors (like the MQ series), electrochemical sensors offer higher sensitivity and better stability.</p>
+    
+    
+
+    <h3>Key Specifications</h3>
+    <table class="spec-table">
+        <tr>
+            <th>Feature</th>
+            <th>Details</th>
+        </tr>
+        <tr>
+            <td>Detection Range</td>
+            <td>0–5 mg/L (typically calibrated for ethanol)</td>
+        </tr>
+        <tr>
+            <td>Operating Voltage</td>
+            <td>3.3V to 5.0V DC</td>
+        </tr>
+        <tr>
+            <td>Output Signal</td>
+            <td>Analog Voltage (0.4V to 3.0V) or I2C/UART</td>
+        </tr>
+        <tr>
+            <td>Interference</td>
+            <td>Low cross-reactivity with other gases</td>
+        </tr>
+    </table>
+    <p><em>Note: Because it is factory calibrated, it reduces the need for complex software compensation, making it "plug-and-play" for Arduino or ESP32 environments.</em></p>
+</section>
+
+<section>
+    <h2>Alcohol Usage in Laboratories</h2>
+    <p>Alcohols (Ethanol, Isopropanol, and Methanol) are the "Swiss Army Knives" of the lab. Their primary uses include:</p>
+    <ul>
+        <li><strong>Sterilization:</strong> 70% Ethanol is the gold standard for disinfecting surfaces and equipment.</li>
+        <li><strong>Solvents:</strong> Used to dissolve organic compounds that are not water-soluble.</li>
+        <li><strong>Fixatives:</strong> Essential in histology for preserving tissue samples.</li>
+        <li><strong>Fuel:</strong> Used in spirit lamps for localized heating.</li>
+    </ul>
+</section>
+
+<section class="warning">
+    <h2>Dangers & Safety</h2>
+    <p>While useful, alcohol presents significant risks if unmonitored:</p>
+    <ul>
+        <li><strong>Flammability:</strong> Most alcohols have low flash points. Vapors can ignite even at a distance from an open flame.</li>
+        <li><strong>Toxicity:</strong> Methanol, in particular, is toxic via skin absorption or inhalation.</li>
+        <li><strong>Vapor Accumulation:</strong> In poorly ventilated areas, alcohol vapors can reach the Lower Explosive Limit (LEL), turning a small spark into a major explosion.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Why Use a Sensor?</h2>
+    <p>Incorporating a sensor like the Gravity Electrochemical module into a lab environment provides an automated safety layer. It can trigger:</p>
+    <ol>
+        <li><strong>Automated Ventilation:</strong> Activating exhaust fans when vapor levels cross a threshold.</li>
+        <li><strong>Early Leak Detection:</strong> Identifying a spilled container before the smell becomes noticeable.</li>
+        <li><strong>Data Logging:</strong> Monitoring air quality trends during sensitive experiments.</li>
+    </ol>
+</section>
+
+<footer>
+    <p style="text-align: center; font-size: 0.8rem; color: #7f8c8d;">&copy; 2026 Laboratory Safety Resources</p>
+</footer>
+
+</body>
+</html>

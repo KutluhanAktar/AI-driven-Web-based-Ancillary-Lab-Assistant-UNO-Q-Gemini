@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Tech: GNSS/GPS Precision & Safety</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 1000px; margin: auto; padding: 20px; background-color: #f8f9fa; }
+        header { background: #27ae60; color: white; padding: 2.5rem; text-align: center; border-radius: 12px; margin-bottom: 25px; }
+        section { background: white; padding: 25px; margin-top: 20px; border-radius: 12px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+        h2 { color: #2e7d32; border-bottom: 2px solid #e8f5e9; padding-bottom: 10px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .spec-table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+        .spec-table th, .spec-table td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        .spec-table th { background-color: #f1f8e9; }
+        .alert { border-left: 6px solid #f39c12; background-color: #fff9f0; padding: 20px; border-radius: 8px; }
+        .formula { font-family: 'Courier New', Courier, monospace; background: #eee; padding: 2px 5px; border-radius: 3px; }
+        footer { text-align: center; margin-top: 40px; color: #7f8c8d; font-size: 0.9rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Gravity: GNSS GPS BeiDou Receiver</h1>
+    <p>Multi-Constellation Positioning & Atomic-Grade Timing for the Modern Lab</p>
+</header>
+
+<section>
+    <h2>1. The Technology: Beyond Just "GPS"</h2>
+    <p>The Gravity GNSS module (often based on the <strong>L76K</strong> or <strong>UC6226</strong> chips) is a <strong>Multi-GNSS</strong> receiver. This means it doesn't just look for US GPS satellites; it simultaneously tracks <strong>BeiDou</strong> (China), <strong>GLONASS</strong> (Russia), and <strong>Galileo</strong> (Europe).</p>
+    
+    
+
+    <div class="grid">
+        <table class="spec-table">
+            <tr>
+                <th>Feature</th>
+                <th>Technical Detail</th>
+            </tr>
+            <tr>
+                <td><strong>Positioning Accuracy</strong></td>
+                <td>2.0m CEP (Horizontal)</td>
+            </tr>
+            <tr>
+                <td><strong>Time Accuracy</strong></td>
+                <td>30ns (Synchronized to Atomic Clocks)</td>
+            </tr>
+            <tr>
+                <td><strong>Interface</strong></td>
+                <td>I2C / UART (Gravity Standard)</td>
+            </tr>
+            <tr>
+                <td><strong>Cold Start</strong></td>
+                <td>< 30 Seconds</td>
+            </tr>
+        </table>
+        <div>
+            <h3>Why Multi-GNSS Matters?</h3>
+            <p>In urban labs or near tall buildings, signal reflections (multipath) cause "GPS Drift." By increasing the number of visible satellites (often 20+ instead of 6-8), this module uses statistical averaging to provide <strong>meter-level accuracy</strong> where standard receivers fail.</p>
+        </div>
+    </div>
+</section>
+
+<section>
+    <h2>2. Lab Usage & Importance</h2>
+    <p>In scientific environments, GNSS modules are used for far more than "finding a location":</p>
+    <ul>
+        <li><strong>NTP Time Servers:</strong> Using the 1PPS (Pulse Per Second) signal to synchronize all lab computers and data loggers to within microseconds of UTC.</li>
+        <li><strong>Environmental Tracking:</strong> Attaching to mobile sensors (drones/buoys) for air quality or water mapping.</li>
+        <li><strong>Tectonic/Structural Monitoring:</strong> Measuring the minute shifts in laboratory buildings or geological sites over long durations.</li>
+        <li><strong>Astronomical Observation:</strong> Providing precise timestamps for telescopic events.</li>
+    </ul>
+</section>
+
+<section class="alert">
+    <h2>3. The Dangers & Risks</h2>
+    <p>Using GNSS in a lab introduces unique vulnerabilities that can compromise experimental integrity:</p>
+    <ul>
+        <li><strong>Signal "Spoofing":</strong> Labs are vulnerable to false RF signals. An attacker (or a faulty signal generator) can broadcast "fake" satellite data, making your equipment believe it is at a different time or location.</li>
+        <li><strong>The "Indoor Gap":</strong> GNSS signals are incredibly weak ($ -130 \text{ dBm} $). Steel-framed lab buildings act as <strong>Faraday Cages</strong>, blocking signals. Relying on GNSS for safety-critical timing indoors without an external antenna can lead to system desync.</li>
+        <li><strong>Jamming Interference:</strong> Lab equipment like high-powered motors, unshielded switching power supplies, or RF transmitters can "drown out" the tiny satellite signal, causing "Signal Loss" errors.</li>
+        <li><strong>Leap Second Errors:</strong> Scientific software must account for "Leap Seconds" provided in the GNSS data stream; failing to do so can cause a 1-second offset in sensitive time-series data.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>4. Integration Tip</h2>
+    <p>For maximum reliability, always use the <strong>Active Antenna</strong> provided in the kit. The built-in Low Noise Amplifier (LNA) in the antenna helps pull signals through high-EMI (Electromagnetic Interference) environments common in electronics labs.</p>
+</section>
+
+<footer>
+    <p>&copy; 2026 Geodetic Systems Integration | Always verify "Lock" status before logging critical data.</p>
+</footer>
+
+</body>
+</html>

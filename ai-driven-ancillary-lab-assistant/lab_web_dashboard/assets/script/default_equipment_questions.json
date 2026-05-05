@@ -1,0 +1,27 @@
+{
+	"skeleton_model": [
+		"How to utilize a skeleton figure in lab experiments?",
+        "How to combine a skeleton figure with other lab equipment to create new experiments?",
+        "What are the skeletal bone names, presented by a skeleton figure?"
+	],
+	"microscope": [
+		"How to utilize a microscope in lab experiments?",
+        "How to combine a microscope with other lab equipment to create new experiments?",
+        "What are the types of microscopes according to their magnification power and the applied illumination?"
+	],
+	"alcohol_burner": [
+		"How to utilize an alcohol burner in lab experiments?",
+        "How to combine an alcohol burner with other lab equipment to create new experiments?",
+        "What are the common alcohol-burning appliances based on an alcohol burner?"
+	],
+	"bunsen_burner": [
+		"How to utilize a Bunsen burner in lab experiments?",
+        "How to combine a Bunsen burner with other lab equipment to create new experiments?",
+        "What are the ubiquitous gases compatible with a Bunsen burner?"
+	],
+	"dynamometer": [
+		"How to utilize a spring dynamometer in lab experiments?",
+        "How to combine a spring dynamometer with other lab equipment to create new experiments?",
+        "What is the relation between a spring dynamometer and Hooke’s Law?"
+	]  
+}

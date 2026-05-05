@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Safety: Grove Pressure Sensing & Protocol</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; line-height: 1.6; color: #2c3e50; max-width: 1000px; margin: auto; padding: 30px; background-color: #f4f7f6; }
+        header { background: #8e44ad; color: white; padding: 2.5rem; text-align: center; border-radius: 12px; margin-bottom: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        section { background: white; padding: 30px; margin-top: 20px; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        h2 { color: #8e44ad; border-bottom: 2px solid #f3e5f5; padding-bottom: 10px; }
+        .spec-container { display: flex; flex-wrap: wrap; gap: 20px; margin: 20px 0; }
+        .spec-table { flex: 1; border-collapse: collapse; min-width: 300px; }
+        .spec-table th, .spec-table td { border: 1px solid #eee; padding: 12px; text-align: left; }
+        .spec-table th { background-color: #f9f4fb; }
+        .danger-card { border-left: 6px solid #e67e22; background-color: #fff9f2; padding: 20px; border-radius: 8px; margin: 20px 0; }
+        .info-box { background-color: #e8f4fd; border-radius: 8px; padding: 15px; border: 1px solid #3498db; }
+        footer { text-align: center; margin-top: 50px; color: #7f8c8d; font-size: 0.85rem; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Grove - Integrated Pressure Sensor Kit</h1>
+    <p>Piezoresistive Transduction for Vacuum and Pressure Monitoring</p>
+</header>
+
+<section>
+    <h2>1. The Technology: Piezoresistive Sensing</h2>
+    <p>The Grove Integrated Pressure Sensor utilizes a silicon-based piezoresistive transducer. When pressure is applied to the internal diaphragm, it changes the electrical resistance of the material. This "strain" is converted into a high-level analog voltage or I2C signal via an on-board signal conditioner.</p>
+
+    
+
+    <div class="spec-container">
+        <table class="spec-table">
+            <tr>
+                <th>Specification</th>
+                <th>Typical Value</th>
+            </tr>
+            <tr>
+                <td><strong>Pressure Range</strong></td>
+                <td>15 kPa to 700 kPa (Standard Variant)</td>
+            </tr>
+            <tr>
+                <td><strong>Supply Voltage</strong></td>
+                <td>3.3V / 5.0V (Grove Interface)</td>
+            </tr>
+            <tr>
+                <td><strong>Output Type</strong></td>
+                <td>Analog (0.2V to 4.7V) / Digital I2C</td>
+            </tr>
+            <tr>
+                <td><strong>Accuracy</strong></td>
+                <td>±2.5% Maximum Error</td>
+            </tr>
+        </table>
+    </div>
+</section>
+
+<section>
+    <h2>2. Importance in Laboratory Usage</h2>
+    <p>Pressure sensors are the "nervous system" of fluid and gas experiments. Their roles include:</p>
+    <ul>
+        <li><strong>Vacuum Systems:</strong> Monitoring suction levels in rotary evaporators or filtration setups.</li>
+        <li><strong>Gas Laws Verification:</strong> Experimentally proving Boyle’s Law ($P \propto 1/V$) and Gay-Lussac’s Law.</li>
+        <li><strong>Leak Detection:</strong> Using "Pressure Decay" testing to ensure the integrity of a sealed reaction vessel.</li>
+        <li><strong>Flow Control:</strong> Measuring the pressure drop across a venturi to calculate flow rates of liquids.</li>
+    </ul>
+</section>
+
+<section class="danger-card">
+    <h2>3. The Dangers of High Pressure</h2>
+    <p>Pressure is stored energy. Failure to monitor it correctly can lead to catastrophic results:</p>
+    <ul>
+        <li><strong>Over-Pressurization:</strong> Exceeding the burst pressure of glassware (like Erlenmeyer flasks) can lead to explosive shattering and shrapnel.</li>
+        <li><strong>Sudden Decompression:</strong> In vacuum systems, a sudden "implosion" can cause chemical splashes and glass failure just as dangerous as an explosion.</li>
+        <li><strong>The "Invisible Load":</strong> High-pressure gas leaks (especially Nitrogen or Helium) can displace Oxygen in small lab rooms, leading to asphyxiation without warning.</li>
+        <li><strong>Sensor Saturation:</strong> If a sensor is rated for 700 kPa and the system reaches 1000 kPa, the sensor may "flatline," giving the researcher a false sense of stability while the system is actually in a danger zone.</li>
+    </ul>
+</section>
+
+<section class="info-box">
+    <h2>4. Integration & Best Practices</h2>
+    <p>To ensure long-term accuracy and safety in the lab:</p>
+    <ol>
+        <li><strong>Compatibility Check:</strong> Ensure the sensor diaphragm is compatible with your gas. Corrosive gases like Chlorine can eat through standard silicon sensors.</li>
+        <li><strong>Snubber Installation:</strong> For systems with rapid pressure spikes (like pumps), use a "snubber" or a small restrictor to protect the sensor diaphragm from mechanical shock.</li>
+        <li><strong>Calibration:</strong> Always perform a "Zero-Point" calibration at local atmospheric pressure before beginning a high-precision measurement.</li>
+    </ol>
+</section>
+
+<footer>
+    <p>&copy; 2026 Laboratory Instrumentation Standards | Grove Ecosystem Safety Documentation</p>
+</footer>
+
+</body>
+</html>
