@@ -1,0 +1,115 @@
+:root{
+	/* Color variables. */
+	--c_main_bg: #414141;
+	
+	--c_header_bg: #777777;
+	--c_header_but_bg: #001E3C; --c_header_but_text: #00BFFF; --c_header_but_highlight: #F5F5F5;
+	
+	--c_sensor_card_bg: #008B8B; --c_sensor_card_box_s: #CCE8E8;
+	--c_sensor_card_highlight: #00BFFF; --c_sensor_card_highlight_bg: #008B8B; --c_sensor_card_emphasize_bg: #66788A;
+	--c_sensor_card_header_bg: #C5A059; --c_sensor_card_text_h1: #E6F4F1; --c_sensor_card_text_h2: #F5F5F5;
+	--c_sensor_card_info_bg: #707070; --c_sensor_card_text_p: #001E3C; --c_sensor_card_text_span: #00BFFF;
+	
+	--c_exp_bg: #707070; --c_exp_highlight: #C5A059;
+	
+	--c_lesson_bg: #707070; --c_lesson_highlight: #C5A059;
+	
+	--c_lesson_pa_bg: #CFCFCF;
+	--c_lesson_pa_card_bg: #001E3C; --c_lesson_pa_card_bor: #00BFFF; --c_lesson_pa_card_highlight: #F5F5F5;
+	--c_lesson_pa_card_text_h1: #00BFFF; --c_lesson_pa_card_text_span: #C5A059;
+	--c_lesson_pa_card_but_bg: #707070; --c_lesson_pa_card_but_text: #F5F5F5; --c_lesson_pa_card_but_highlight_bg: #E01E26; --c_lesson_pa_card_but_highlight_text: #F8F9FA; --c_lesson_pa_card_but_highlight_text_s: #111111;
+	--c_lesson_pa_notf_card_bg: #414141; --c_lesson_pa_notf_card_bor: #00BFFF; --c_lesson_pa_notf_card_bor_s: #E01E26;
+	--c_lesson_pa_notf_card_but_bg: #D1B37A; --c_lesson_pa_notf_card_but_bg_s: #F3ECDE; --c_lesson_pa_notf_card_but_text: #001E3C;
+	--c_lesson_pa_notf_card_input_bg: #F5F5F5; --c_lesson_pa_notf_card_input_pl_text: #777777; --c_lesson_pa_notf_card_input_text: #E01E26;
+	
+	--c_obj_d_iframe_bor: #726BE1;
+	--c_obj_d_h2_bg: #726BE1; --c_obj_d_h2_text: #FEBA06;
+	--c_obj_d_gemini_bg: #777777;
+	--c_obj_d_gemini_textarea_bg: #F5F5F5; --c_obj_d_gemini_textarea_text: #001E3C; --c_obj_d_gemini_textarea_highlight: #00BFFF;
+	--c_obj_d_gemini_but_bg: #4E89FF; --c_obj_d_gemini_but_highlight: #E3E3E3; --c_obj_d_gemini_but_highlight_s: #9B72F3;
+	--c_obj_d_gemini_question_con_bg: #FF9800; --c_obj_d_gemini_question_con_bor: #00CFE8;
+	--c_obj_d_gemini_question_bg: #FF4C4C; --c_obj_d_gemini_question_bg_s: #24D68B; --c_obj_d_gemini_question_highlight: #3253FB; --c_obj_d_gemini_question_highlight_s: #E83E8C;
+	
+	--c_overlay_bg: rgba(0,30,60,.85); --c_overlay_highlight: #F5F5F5;
+	
+	
+	/* Element attributes. */
+	--main_w: 100vw; --main_h: 100vh;
+	--header_w: var(--main_w); --header_h: 8em;
+	--menu_control_w: calc(var(--main_w)/2); --menu_control_h: calc(var(--header_h) - 30px);
+	--menu_control_but_w: 50%; --menu_control_but_h: 100%;
+	
+	--sensor_interface_w: var(--main_w); --sensor_interface_h: calc(var(--main_h) - var(--header_h));
+	--sensor_lab_exp_w: 50em; --sensor_lab_exp_h: var(--sensor_interface_h);
+	--sensor_lab_exp_con_w: calc(var(--sensor_lab_exp_w) - 5em); --sensor_lab_exp_con_h: calc(var(--sensor_lab_exp_h) - 3em);
+	--sensor_info_w: calc(var(--sensor_interface_w) - var(--sensor_lab_exp_w)); --sensor_info_h: var(--sensor_interface_h); --sensor_info_pad: 1.5em;
+	--sensor_info_but_w: 15em; --sensor_info_but_h: 15em; --sensor_info_but_gap: 1.6em;
+	
+	--gemini_interface_w: var(--main_w); --gemini_interface_h: calc(var(--main_h) - var(--header_h));
+	--gemini_lesson_w: 35vw; --gemini_lesson_h: var(--gemini_interface_h);
+	--gemini_lesson_con_w: calc(var(--gemini_lesson_w) - 5em); --gemini_lesson_con_h: calc(var(--gemini_lesson_h) - 3em);
+	--gemini_lesson_pan_w: 35vw; --gemini_lesson_pan_h: var(--gemini_interface_h);
+	--gemini_obj_detect_w: calc(100% - var(--gemini_lesson_w) - var(--gemini_lesson_pan_w)); --gemini_obj_detect_h: var(--gemini_interface_h); 
+	--gemini_generate_but_w: 90%; --gemini_generate_but_h: 6rem;
+	--gemini_generate_but_logo_h: 100%; --gemini_generate_but_logo_pad: 5rem;
+
+	
+    /* Custom easing transition variables. */
+	--elastic-easing: linear(
+		0, 0.2178 2.1%, 0.862 6.46%, 1.1144 8.49%, 1.2959 10.7%, 1.3463 11.81%,
+		1.3705 12.94%, 1.3726, 1.3643 14.48%, 1.3151 16.2%, 1.0317 21.81%,
+		0.941 24.01%, 0.8912 25.91%, 0.877 26.86%, 0.8694 27.84%, 0.8698 29.21%,
+		0.8824 30.71%, 0.9066 32.36%, 0.981 36.36%, 1.0122 38.33%, 1.0357,
+		1.046 42.71%, 1.0461 44.14%, 1.0416 45.7%, 0.9961 53.26%, 0.9877,
+		0.9839 57.54%, 0.9853 60.71%, 1.0012 68.14%, 1.0056 72.24%, 0.9981 86.66%, 1
+	);
+
+	--bounce-easing: linear(
+		0 0% 0.7%, 0.001 0.8% 1.3%, 0.002 1.4% 1.7%, 0.003 1.8% 2.1%, 0.004, 0.004,
+		0.005, 0.005, 0.006, 0.007, 0.007, 0.008, 0.009, 0.01, 0.01, 0.011, 0.012,
+		0.013, 0.014, 0.015, 0.016, 0.017, 0.018, 0.019, 0.02, 0.021, 0.022, 0.023,
+		0.024, 0.026, 0.027, 0.028, 0.03, 0.031, 0.032, 0.034, 0.035, 0.037,
+		0.038 7.1%, 0.041, 0.044 7.7%, 0.046, 0.048, 0.05, 0.051 8.2%, 0.055, 0.059,
+		0.063, 0.066, 0.071, 0.075, 0.079, 0.084, 0.088, 0.093, 0.098, 0.103, 0.108,
+		0.113, 0.118, 0.124, 0.129, 0.135, 0.141, 0.147, 0.153, 0.159, 0.165, 0.172,
+		0.178, 0.185, 0.191, 0.198, 0.205, 0.212, 0.22, 0.227, 0.235, 0.242, 0.25,
+		0.258, 0.266, 0.274, 0.282, 0.291, 0.299, 0.308, 0.317, 0.325, 0.335, 0.343,
+		0.353, 0.362, 0.371, 0.381, 0.391, 0.4, 0.41, 0.42, 0.431, 0.441, 0.451,
+		0.462, 0.473, 0.483, 0.494, 0.505, 0.516, 0.528, 0.539, 0.551, 0.563, 0.574,
+		0.586, 0.598, 0.61, 0.622, 0.635, 0.647, 0.66, 0.673, 0.685, 0.699, 0.712,
+		0.725, 0.738, 0.751, 0.765, 0.779, 0.793, 0.806, 0.821, 0.835, 0.849, 0.864,
+		0.879, 0.893, 0.908, 0.923, 0.938, 0.953, 0.969, 0.984, 1, 0.992, 0.985,
+		0.977, 0.97, 0.962, 0.955, 0.948, 0.941, 0.935, 0.928, 0.922, 0.915, 0.909,
+		0.903, 0.897, 0.891, 0.885, 0.879, 0.874, 0.868, 0.863, 0.858, 0.853, 0.848,
+		0.843, 0.838, 0.834, 0.829, 0.825, 0.821, 0.817, 0.813, 0.809, 0.805,
+		0.801 46.3%, 0.8, 0.798, 0.794, 0.791, 0.788, 0.787, 0.785, 0.784, 0.782,
+		0.781, 0.78, 0.778, 0.777, 0.776, 0.774, 0.773, 0.772, 0.771, 0.77, 0.769,
+		0.768, 0.767, 0.766, 0.765, 0.764, 0.763, 0.762, 0.761, 0.76, 0.76, 0.759,
+		0.758, 0.757, 0.757, 0.756, 0.756, 0.755, 0.754, 0.754, 0.753 52.4% 52.7%,
+		0.752 52.8% 53.1%, 0.751 53.3% 53.7%, 0.75 53.8% 55.3%, 0.751 55.4% 55.8%,
+		0.752 56% 56.2%, 0.753 56.4% 56.7%, 0.754, 0.754, 0.755, 0.755, 0.756,
+		0.757, 0.757, 0.758, 0.759, 0.76, 0.76, 0.761, 0.762, 0.763, 0.764, 0.765,
+		0.766, 0.767, 0.768, 0.769, 0.77, 0.771, 0.772, 0.773, 0.774, 0.776, 0.777,
+		0.778, 0.78, 0.781, 0.782, 0.784, 0.785, 0.787, 0.788 61.6%, 0.791,
+		0.794 62.2%, 0.796, 0.798, 0.801, 0.805, 0.809, 0.813, 0.817, 0.821, 0.825,
+		0.829, 0.834, 0.838, 0.843, 0.848, 0.852, 0.857, 0.863, 0.868, 0.873, 0.879,
+		0.885, 0.891, 0.897, 0.903, 0.909, 0.915, 0.921, 0.928, 0.935, 0.941, 0.948,
+		0.955, 0.962, 0.97, 0.977, 0.985, 0.992, 1, 0.996, 0.992, 0.989, 0.985, 0.982,
+		0.981, 0.979 74.4%, 0.976 74.7%, 0.974, 0.973, 0.971, 0.97, 0.968, 0.967,
+		0.966, 0.965, 0.963, 0.962, 0.961, 0.96, 0.959, 0.957, 0.956, 0.955, 0.954,
+		0.953, 0.952, 0.951, 0.95, 0.949, 0.949, 0.948, 0.947, 0.946, 0.946, 0.945,
+		0.944, 0.944, 0.943, 0.942, 0.942, 0.941, 0.941, 0.94 79.8% 80.1%,
+		0.939 80.2% 80.5%, 0.938 80.7% 83%, 0.939 83.1% 83.4%, 0.94 83.5% 83.8%,
+		0.941, 0.941, 0.942, 0.942, 0.943, 0.944, 0.944, 0.945, 0.945, 0.946, 0.947,
+		0.948, 0.949, 0.949, 0.95, 0.951, 0.952, 0.953, 0.954, 0.955, 0.956, 0.957,
+		0.958, 0.959, 0.961, 0.962, 0.963, 0.964, 0.966, 0.967, 0.968, 0.97, 0.971,
+		0.973, 0.974, 0.976, 0.977, 0.979, 0.982 89.5%, 0.984, 0.985, 0.987, 0.989,
+		0.992, 0.996, 1 90.9%, 0.999, 0.998, 0.997, 0.996, 0.995, 0.995, 0.994, 0.993,
+		0.992, 0.992, 0.991, 0.99, 0.99, 0.989, 0.989, 0.988, 0.988,
+		0.987 93.5% 93.7%, 0.986 93.9% 94.2%, 0.985 94.3% 95%, 0.984 95.2% 95.7%,
+		0.985 95.9% 96.6%, 0.986 96.7% 97%, 0.987 97.1% 97.4%, 0.988, 0.988,
+		0.989, 0.989, 0.99, 0.99, 0.991, 0.992, 0.992, 0.993, 0.994, 0.995, 0.995,
+		0.996, 0.997, 0.998, 0.999, 1
+	); 	
+	
+}

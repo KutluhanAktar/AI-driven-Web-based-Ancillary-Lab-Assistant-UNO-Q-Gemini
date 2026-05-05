@@ -1,0 +1,21 @@
+profiles:
+  default:
+    fqbn: 
+    platforms:
+      - platform: arduino:zephyr
+    libraries:
+      - dependency: ArxContainer (0.7.0)
+      - dependency: ArxTypeTraits (0.3.2)
+      - dependency: DebugLog (0.8.4)
+      - MsgPack (0.4.2)
+      - dir: customLibs/modded_Adafruit_GC9A01A_1.1.1
+      - dir: customLibs/modded_DFRobot_Alcohol_1.0.0
+      - dir: customLibs/modded_DFRobot_GNSS_1.0.0
+      - dir: customLibs/modded_DFRobot_HX711_I2C_1.0.0
+      - dir: customLibs/DFRobot_MultiGasSensor
+      - dir: customLibs/DFRobot_Geiger
+      - dir: customLibs/DFRobot_ID809
+      - dependency: Adafruit BusIO (1.17.4)
+      - Adafruit GFX Library (1.12.4)
+
+default_profile: default

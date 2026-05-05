@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Safety: NO2 Sensing & Protocol</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 950px; margin: auto; padding: 20px; background-color: #f0f2f5; }
+        header { background: #1e3a5f; color: white; padding: 2.5rem; text-align: center; border-radius: 12px; margin-bottom: 25px; }
+        section { background: white; padding: 25px; margin-top: 20px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); }
+        h2 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 8px; margin-top: 0; }
+        h3 { color: #2980b9; }
+        .spec-table { width: 100%; border-collapse: collapse; margin: 20px 0; background: #fff; }
+        .spec-table th, .spec-table td { border: 1px solid #dfe6e9; padding: 15px; text-align: left; }
+        .spec-table th { background-color: #f8f9fa; color: #2c3e50; }
+        .danger-box { border-left: 6px solid #c0392b; background-color: #fff5f5; padding: 20px; margin: 20px 0; }
+        .usage-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .footer { text-align: center; padding: 40px; color: #7f8c8d; font-size: 0.9rem; }
+        .formula { font-family: "Courier New", Courier, monospace; font-weight: bold; background: #eee; padding: 2px 4px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Nitrogen Dioxide (NO2) in the Laboratory</h1>
+    <p>Monitoring Hazardous Concentrations with Electrochemical Precision</p>
+</header>
+
+<section>
+    <h2>1. The Gravity Electrochemical NO2 Sensor</h2>
+    <p>The Gravity series utilizes a <strong>factory-calibrated electrochemical probe</strong>. Unlike traditional metal-oxide sensors that require long "burn-in" times and suffer from high power consumption, this sensor measures gas concentration through a redox reaction at the electrode surface.</p>
+    
+    
+
+    <h3>Technical Specifications</h3>
+    <table class="spec-table">
+        <tr>
+            <th>Parameter</th>
+            <th>Value / Capability</th>
+        </tr>
+        <tr>
+            <td><strong>Gas Detected</strong></td>
+            <td>Nitrogen Dioxide (NO2)</td>
+        </tr>
+        <tr>
+            <td><strong>Detection Range</strong></td>
+            <td>0–20 ppm (Standard lab safety range)</td>
+        </tr>
+        <tr>
+            <td><strong>Resolution</strong></td>
+            <td>0.1 ppm</td>
+        </tr>
+        <tr>
+            <td><strong>Interface</strong></td>
+            <td>I2C, UART, and Analog (Gravity Compatible)</td>
+        </tr>
+        <tr>
+            <td><strong>Calibration</strong></td>
+            <td>Factory pre-set; plug-and-play integration</td>
+        </tr>
+    </table>
+</section>
+
+<section>
+    <h2>2. Nitrogen Dioxide: Sources & Usage</h2>
+    <p>Nitrogen Dioxide is a reddish-brown, foul-smelling gas. In labs, it is rarely used as a primary reagent but is frequently encountered as a significant byproduct:</p>
+    <div class="usage-grid">
+        <div>
+            <h3>Common Origins</h3>
+            <ul>
+                <li><strong>Nitric Acid Reactions:</strong> Dissolving metals in concentrated $HNO_3$.</li>
+                <li><strong>Combustion Analysis:</strong> Testing fuels or organic matter.</li>
+                <li><strong>Nitration:</strong> Synthesis of explosives or organic nitro-compounds.</li>
+            </ul>
+        </div>
+        <div>
+            <h3>Controlled Uses</h3>
+            <ul>
+                <li><strong>Oxidizing Agent:</strong> In specific specialized rocket propellants or organic synthesis.</li>
+                <li><strong>Catalyst:</strong> Used in certain industrial chamber processes.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section class="danger-box">
+    <h2>3. The Dangers of NO2 Exposure</h2>
+    <p><strong>NO2 is highly toxic by inhalation.</strong> Even at low concentrations, it can cause severe respiratory damage because it is relatively insoluble in the moist membranes of the upper respiratory tract, allowing it to penetrate deep into the lungs.</p>
+    <ul>
+        <li><strong>Immediate Effects:</strong> Coughing, shortness of breath, and irritation of the eyes and throat.</li>
+        <li><strong>Delayed Risks:</strong> Exposure can lead to <em>Pulmonary Edema</em> (fluid in the lungs) several hours after the initial exposure has ended.</li>
+        <li><strong>Environmental Risk:</strong> NO2 is a precursor to nitric acid rain and smog; it must be scrubbed before venting.</li>
+    </ul>
+</section>
+
+<section>
+    <h2>4. Importance of Real-Time Monitoring</h2>
+    <p>Human olfaction (smell) is an unreliable safety tool. By the time you "smell" the bleach-like or acrid odor of NO2, the concentration may already exceed safe OSHA limits.</p>
+    <p>Integrating the Gravity sensor into a Lab Information Management System (LIMS) or an Arduino-based safety rig allows for:</p>
+    <ul>
+        <li><strong>Interlock Safety:</strong> Automatically shutting down a reaction if NO2 levels spike.</li>
+        <li><strong>Fume Hood Verification:</strong> Ensuring that ventilation systems are actually pulling the gas away from the user.</li>
+        <li><strong>Compliance:</strong> Maintaining digital logs for safety audits and environmental regulations.</li>
+    </ul>
+</section>
+
+<div class="footer">
+    <hr>
+    <p>Safety Documentation &copy; 2026 | Always consult the SDS (Safety Data Sheet) before handling Nitric Acid or Nitrogen oxides.</p>
+</div>
+
+</body>
+</html>

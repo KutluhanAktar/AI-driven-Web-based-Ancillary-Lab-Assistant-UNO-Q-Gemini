@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- Page info. -->
+	<title>AI-driven Lab Assistant</title>
+    <!-- Site settings. -->
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- link to site icon -->
+	<link rel="icon" type="image/png"  href="assets/img/dashboard_icon.png">
+
+	<!-- Add jQuery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+	<!-- Add dashboard style file -->
+	<link rel="stylesheet" type="text/css" href="assets/style/index.css"></link>
+	
+	<!-- Add Google fonts. -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Gravitas+One&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="main">
+<!-- Menu control start. -->
+<div class="header">
+<div class="menu_control">
+<section><h2 class="highlighted">Sensor Experiments</h2></section>
+<section><h2>Gemini AI Lessons</h2></section>
+<section></section>
+</div>
+</div>
+<!-- Menu control end. -->
+<!-- Sensor interface start. -->
+<div class="sensor_interface showing">
+<section cat="data">
+<article sensor="home" sp="none">
+<div><span></span><h1>Home Interface</h1></div>
+<h2>Return ↩️</h2>
+</article>
+<article sensor="pressure" sp="none">
+<div><span></span><h1>Pressure</h1></div>
+<h2>Waiting...</h2>
+<section><p>(Integrated)</p><span>kPa</span></section>
+</article>
+<article sensor="alcohol_concentration" sp="none">
+<div><span></span><h1>Alcohol</h1></div>
+<h2>Waiting...</h2>
+<section><p>(Concentration)</p><span>PPM</span></section>
+</article>
+<article sensor="weight" sp="none">
+<div><span></span><h1>Weight</h1></div>
+<h2>Waiting...</h2>
+<section><p>(Estimation)</p><span>Gram (g)</span></section>
+</article>
+<article sensor="water" sp="on">
+<div><span></span><h1>Water</h1></div>
+<h2>ON</h2>
+<section><p>(Atomization)</p><span>V</span></section>
+</article>
+<article sensor="water" sp="off">
+<div><span></span><h1>Water</h1></div>
+<h2>OFF</h2>
+<section><p>(Atomization)</p><span>V</span></section>
+</article>
+<article sensor="no2" sp="concentration">
+<div><span></span><h1>NO2</h1></div>
+<h2>Waiting...</h2>
+<section><p>(Concentration)</p><span>PPM</span></section>
+</article>
+<article sensor="no2" sp="board_temp">
+<div><span></span><h1>NO2</h1></div>
+<h2>Waiting...</h2>
+<section><p>(Board Temperature)</p><span>°C</span></section>
+</article>
+<article sensor="geiger" sp="cpm">
+<div><span></span><h1>Geiger</h1></div>
+<h2>Waiting...</h2>
+<section><p>(Ionizing)</p><span>CPM</span></section>
+</article>
+<article sensor="geiger" sp="nsvh">
+<div><span></span><h1>Geiger</h1></div>
+<h2>Waiting...</h2>
+<section><p>(Ionizing)</p><span>nSv/h</span></section>
+</article>
+<article sensor="geiger" sp="usvh">
+<div><span></span><h1>Geiger</h1></div>
+<h2>Waiting...</h2>
+<section><p>(Ionizing)</p><span>μSv/h</span></section>
+</article>
+<article sensor="gnss" sp="date">
+<div><span></span><h1>GNSS</h1></div>
+<h2>Waiting...</h2>
+<section><p>(Date)</p><span>Y/M/D</span></section>
+</article>
+<article sensor="gnss" sp="utc">
+<div><span></span><h1>GNSS</h1></div>
+<h2>Waiting...</h2>
+<section><p>(UTC)</p><span>H_M_S</span></section>
+</article>
+<article sensor="gnss" sp="lat_dir">
+<div><span></span><h1>GNSS</h1></div>
+<h2>Waiting...</h2>
+<section><p>(Latitude Direction)</p><span>°N ↔ °S</span></section>
+</article>
+<article sensor="gnss" sp="lon_dir">
+<div><span></span><h1>GNSS</h1></div>
+<h2>Waiting...</h2>
+<section><p>(Longitude Direction)</p><span>°E ↔ °W</span></section>
+</article>
+<article sensor="gnss" sp="latitude">
+<div><span></span><h1>GNSS</h1></div>
+<h2>Waiting...</h2>
+<section><p>(Latitude)</p><span>Degrees</span></section>
+</article>
+<article sensor="gnss" sp="longitude">
+<div><span></span><h1>GNSS</h1></div>
+<h2>Waiting...</h2>
+<section><p>(Longitude)</p><span>Degrees</span></section>
+</article>
+<article sensor="gnss" sp="altitude">
+<div><span></span><h1>GNSS</h1></div>
+<h2>Waiting...</h2>
+<section><p>(Altitude)</p><span>Metre (m)</span></section>
+</article>
+<article sensor="gnss" sp="sog">
+<div><span></span><h1>GNSS</h1></div>
+<h2>Waiting...</h2>
+<section><p>(Speed Over Ground)</p><span>SOG</span></section>
+</article>
+<article sensor="gnss" sp="cog">
+<div><span></span><h1>GNSS</h1></div>
+<h2>Waiting...</h2>
+<section><p>(Course Over Ground)</p><span>COG</span></section>
+</article>
+</section>
+  
+<section cat="exp">
+<img src="assets/img/gemini_logo.png" />
+<iframe src="experiments/gemini_home.html"></iframe>
+<span></span>
+</section>
+  
+</div>
+<!-- Sensor interface end. -->
+
+<!-- Gemini AI lessons start. -->
+<div class="gemini_lessons">
+<section cat="object_detection">
+<section>
+<iframe src="lessons/gemini_animations/gemini_obj_detection_waiting.html" scrolling="no"></iframe>
+<div><input placeholder="skeleton"></input><button id="save_new_sample_but">🖼️ Save Sample</button></div>
+</section>
+<h2>🚀 Please activate your account</h2>
+<div>
+<textarea></textarea>
+<article latest_detected_equipment="None"><!-- Default lesson questions. --></article>
+<button id="generate_ai_lesson">Generate Lesson with Gemini</button>
+</div>
+</section>
+
+<section cat="lesson_panel">
+<h2>Waiting server response!</h2>                                 
+</section>
+
+<section cat="lesson">
+<img src="assets/img/gemini_logo.png" />
+<iframe src="lessons/gemini_animations/gemini_lesson_show_idle.html"></iframe>
+<span></span>
+</section>
+
+</div>
+<!-- Gemini AI lessons end. -->
+
+<!-- Notification overlay start. -->
+<div class="notification_overlay idle">
+<iframe></iframe>
+<h2>Please scan your fingerprint!</h2>
+</div>
+<!-- Notification overlay end. -->
+
+</div>
+
+  
+<!-- Add the required scripts. -->
+<script src="assets/script/socket.io.min.js"></script>
+<script src="assets/script/index.js" type="module"></script>
+
+</body>
+</html>
