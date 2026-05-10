@@ -2,7 +2,7 @@
 
 # Original Project Publication Date
 
-**May 6, 2026**
+**May 10, 2026**
 
 # Description
 
@@ -55,9 +55,9 @@ As I was taking inspiration from my previous lab assistant project, I heavily mo
 # Inspect the project tutorial on:
 
 - **[kutluhanaktar.com](https://www.kutluhanaktar.com/projects/AI_driven_Ancillary_Lab_Assistant_w_UNO_Q_and_Gemini/)**
-- **[Hackster]()**
-- **[Instructables]()**
-- **[Hackaday]()**
+- **[Hackster](https://www.hackster.io/kutluhan-aktar/ai-driven-web-based-ancillary-lab-assistant-uno-q-gemini-b6d539)**
+- **[Instructables](https://www.instructables.com/AI-driven-Web-based-Ancillary-Lab-Assistant-UNO-Q-/)**
+- **[Hackaday](https://hackaday.io/project/205671-ai-driven-web-based-lab-assistant-uno-q-gemini)**
 
 <img width="384" height="512" alt="pcb_solder_7" src="https://github.com/user-attachments/assets/9852a9ea-5ddf-4f94-bcbc-188012e775cf" /> <br>
 
